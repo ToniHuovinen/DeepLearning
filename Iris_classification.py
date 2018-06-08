@@ -50,6 +50,9 @@ classifier.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['
 # Fit the model
 classifier.fit(X_train, y_train, epochs=200, batch_size=5)
 
+# Make predictions. X_test's labels are y_test, so check the results against those
+y_pred = classifier.predict(X_test)
+
 loss, accuracy = classifier.evaluate(X_test, y_test)
 print(accuracy)
 
