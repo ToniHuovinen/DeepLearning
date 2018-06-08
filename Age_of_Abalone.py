@@ -43,8 +43,7 @@ onehotencoder = OneHotEncoder(categorical_features=[0])
 X = onehotencoder.fit_transform(X).toarray()
 
 
-# Splitting the data into training and test set. Abalone Gender has been dropped for now.
-# Not sure if gender brings any real value for predicting age.
+# Splitting the data into training and test set.
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 0)
 
 
